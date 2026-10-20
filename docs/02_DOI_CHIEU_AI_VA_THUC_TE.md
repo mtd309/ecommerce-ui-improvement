@@ -35,4 +35,3 @@ AI giúp em đặt câu hỏi kiểm tra và phát hiện cơ hội cải tiến
 - Bảng khảo sát dựa trên thực tế: [`01_KHAO_SAT_WEBSITE.md`](01_KHAO_SAT_WEBSITE.md).
 - Trang minh họa: [`../index.html`](../index.html).
 
-**Phân biệt:** Bảng ở mục 3 là bản tóm lược và hiệu chỉnh kết quả AI, không được trình bày như bản transcript nguyên văn toàn bộ phản hồi AI.
