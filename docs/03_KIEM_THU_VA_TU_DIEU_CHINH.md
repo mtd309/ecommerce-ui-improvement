@@ -31,12 +31,8 @@
 | `.search-section` | `padding:75px 20px 92px` | `padding:48px 20px 52px` | Giảm khoảng cách trên/dưới khu vực tìm kiếm. |
 | `.empty-state` | `padding:60px 0 10px` | `padding:36px 0 10px` | Đưa nội dung trạng thái rỗng và phần gợi ý đến gần nhau hơn. |
 
-**Em hiểu gì?** `padding` là khoảng cách bên trong phần tử. Ba giá trị lần lượt chỉ phía trên, hai bên trái/phải, và phía dưới. Thay đổi `padding` không đổi nội dung HTML mà đổi khoảng trống hiển thị. `display:grid` và `grid-template-columns` tổ chức lưới sản phẩm; `@media` thay đổi cách hiển thị theo độ rộng màn hình.
+Từ đây em hiểu `padding` là khoảng cách bên trong phần tử. Ba giá trị lần lượt chỉ phía trên, hai bên trái/phải, và phía dưới. Thay đổi `padding` không đổi nội dung HTML mà đổi khoảng trống hiển thị. `display:grid` và `grid-template-columns` tổ chức lưới sản phẩm; `@media` thay đổi cách hiển thị theo độ rộng màn hình.
 
-## 5. Minh chứng hình ảnh nên lưu
-
-Có thể dùng chính các ảnh em đã chụp **trước/sau chỉnh CSS** và bản mobile. Nếu thêm lên GitHub, đặt tên rõ ràng trong `docs/evidence/` như `before-desktop.png`, `after-desktop.png`, `after-mobile.png` và dẫn ở đây. **Không ghi là đã upload ảnh cho tới khi file thật xuất hiện.**
-
-## 6. Đánh giá cá nhân
+## 5. Đánh giá cá nhân
 
 Em giữ nguyên phần chức năng và các thành phần mà bản demo đã đáp ứng, chỉ sửa vấn đề khoảng trắng do bản thân phát hiện. Kết quả minh họa một cải tiến nhỏ và có thể giải thích bằng HTML/CSS ở mức bài tập Chương 1.
