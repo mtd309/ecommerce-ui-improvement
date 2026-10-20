@@ -22,8 +22,6 @@
 | Bố cục điện thoại | Kiểm tra phiên bản mobile | Em đã kiểm tra và báo giao diện ổn, không phát hiện chồng lấn. |
 | Chỉnh sửa cá nhân | Giảm khoảng cách dọc trong `style.css`, tải lại trang | Khoảng trắng giảm; phần gợi ý sản phẩm được đưa lên gần hơn. |
 
-**Giới hạn minh chứng:** Bảng này ghi lại những lần kiểm tra đã được báo trong cuộc trò chuyện, không giả tạo thông số kích thước màn hình, ảnh chụp hoặc kết quả đo chưa có.
-
 ## 4. Chỉnh sửa mã CSS do em thực hiện
 
 | Bộ chọn CSS | Trước | Sau | Mục đích |
