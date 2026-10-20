@@ -157,8 +157,8 @@ Em sử dụng ChatGPT để hỗ trợ:
 
 Chi tiết về cách sử dụng AI được trình bày trong file [AI_USAGE.md](AI_USAGE.md).
 
-## Lưu ý về nguồn sản phẩm
+## 8. Tài liệu minh chứng bài tập
 
-Bốn hình SVG, tên sản phẩm và giá trong bản demo đều là dữ liệu minh họa phục vụ bài tập, không phải hình ảnh sản phẩm và giá bán chính thức của ETS Official.
-
-Đây là sản phẩm học tập độc lập, chỉ tham khảo cách tổ chức giao diện và không liên kết chính thức với ETS Official.
+- [Nhiệm vụ 1 – Khảo sát website ETS Official](docs/01_KHAO_SAT_WEBSITE.md)
+- [Nhiệm vụ 2 – Phân tích AI và đối chiếu thực tế](docs/02_DOI_CHIEU_AI_VA_THUC_TE.md)
+- [Nhiệm vụ 3 – Kiểm thử và tự điều chỉnh giao diện](docs/03_KIEM_THU_VA_TU_DIEU_CHINH.md)
