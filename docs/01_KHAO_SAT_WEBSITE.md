@@ -33,6 +33,3 @@
 
 ETS có giao diện bán thời trang với các chức năng mua sắm cơ bản và thông tin kích thước sẵn có. Các đề xuất trên là cơ hội cải thiện UX theo góc nhìn khảo sát, không được mô tả như lỗi đã được chứng minh. Em lựa chọn **trạng thái tìm kiếm không có kết quả** vì vấn đề đủ cụ thể, gắn với hành trình mua sắm và có thể minh họa trong phạm vi một trang HTML/CSS.
 
-## 5. Minh chứng hình ảnh
-
-Ảnh chụp website gốc đã được em dùng trong quá trình khảo sát. Chỉ đính kèm các ảnh thực tế có sẵn, không tạo ảnh giả. Nếu đưa ảnh lên GitHub, đặt trong `docs/evidence/` và ghi rõ tên file cùng khu vực tương ứng. Không bắt buộc ảnh theo nguyên văn Nhiệm vụ 1, nhưng có ảnh sẽ hỗ trợ việc đối chiếu.
