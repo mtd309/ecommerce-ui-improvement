@@ -275,3 +275,8 @@ Vì dự án không dùng JavaScript hoặc backend:
 - View Item mở phần mô tả bằng HTML `<details>`, không phải chức năng mua hàng.
 
 Đây là bản cải tiến giao diện phục vụ học tập, không phải một website thương mại điện tử đầy đủ.
+
+
+## 7. Lưu ý về tính trung thực của nhật ký
+
+Các prompt trong tài liệu này là bản tổng hợp nội dung yêu cầu chính, không phải bản ghi nguyên văn toàn bộ lịch sử trò chuyện. Mã do AI gợi ý không được xem là kết quả đã kiểm thử cho đến khi sinh viên chạy trên trình duyệt. Những nhận xét về website tham khảo cần gắn với quan sát đã ghi nhận; đề xuất thiết kế của bản demo không được mô tả thành chức năng đang tồn tại trên ETS Official.
