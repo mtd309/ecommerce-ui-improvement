@@ -1,89 +1,268 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F3XSV3MM5Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website - Bài tập CSS</title>
 
-  gtag('config', 'G-F3XSV3MM5Z');
-</script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="An educational search empty-state UI improvement inspired by ETS Official.">
-  <title>Search — ETS Inspired UI Improvement</title>
-  <link rel="stylesheet" href="css/style.css">
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f5f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+        }
+
+        .profile {
+            background: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 12px #00000010;
+        }
+
+        .avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #dce8f5;
+            margin-bottom: 15px;
+        }
+
+        .avatar-placeholder {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            background: #dce8f5;
+            color: #315b83;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .profile h1 {
+            color: #244c72;
+            margin-bottom: 8px;
+        }
+
+        .profile p {
+            color: #777;
+        }
+
+        .social {
+            margin-top: 20px;
+        }
+
+        .social a {
+            display: inline-block;
+            margin: 5px;
+            padding: 8px 18px;
+            background: #315f89;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .social a:hover {
+            background: #193d60;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 30px 0 20px;
+            color: #244c72;
+            font-size: 26px;
+        }
+
+        .assignments {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #00000010;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #315f89;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #777;
+            min-height: 45px;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #315f89;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .card a:hover {
+            background: #193d60;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #888;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            .assignments {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 450px) {
+            .assignments {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="ETS inspired demo, back to top">ETS<span class="brand-dot">.</span></a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#recommendations">ALL PRODUCTS</a>
-      <a href="#about">ABOUT THIS DEMO</a>
-    </nav>
-    <span class="header-label">UI STUDY / 2026</span>
-  </header>
 
-  <main id="top">
-    <section class="search-section" aria-labelledby="search-title">
-      <p class="eyebrow">SEARCH / 01</p>
-      <h1 id="search-title">Find your next piece.</h1>
-      <div class="search-field" aria-label="Example search query; this is a static HTML and CSS demo">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"/><path d="m16 16 5 5"/></svg>
-        <span>laptop</span>
-        <span class="search-tag">EXAMPLE QUERY</span>
-      </div>
+<div class="container">
 
-      <div class="empty-state">
-        <div class="empty-symbol" aria-hidden="true">Ø</div>
-        <p class="empty-kicker">NO MATCH FOUND</p>
-        <h2>Nothing for “laptop” — yet.</h2>
-        <p class="empty-description">We couldn’t find a match for that search. Explore the collection below to discover something else.</p>
-        <a class="primary-link" href="#recommendations">EXPLORE THE COLLECTION <span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
+    <!-- THÔNG TIN CÁ NHÂN -->
+    <section class="profile">
 
-    <section class="recommendations" id="recommendations" aria-labelledby="recommendations-title">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">A LITTLE INSPIRATION</p>
-          <h2 id="recommendations-title">You may also like</h2>
+        <img
+            src="images/anh-ca-nhan.jpg"
+            alt="Ảnh cá nhân"
+            class="avatar"
+            onerror="this.style.display='none'; document.getElementById('avatar-placeholder').style.display='flex';"
+        >
+
+        <div class="avatar-placeholder" id="avatar-placeholder">
+            YOUR PHOTO
         </div>
-        <span class="product-count">04 ITEMS</span>
-      </div>
 
-      <div class="product-grid">
-        <article class="product-card">
-          <img src="images/jacket.svg" alt="Illustration of a charcoal cropped jacket on a neutral background" width="700" height="900">
-          <div class="product-info"><div><h3>STRUCTURED JACKET</h3><p class="price">1,890,000 VND</p></div><span class="item-number">01</span></div>
-          <details><summary>VIEW ITEM <span aria-hidden="true">↗</span></summary><p>Charcoal cropped jacket with a modern structured silhouette. Illustrative sample product.</p></details>
-        </article>
-        <article class="product-card">
-          <img src="images/top.svg" alt="Illustration of an ivory asymmetric top on a neutral background" width="700" height="900">
-          <div class="product-info"><div><h3>ASYMMETRIC TOP</h3><p class="price">790,000 VND</p></div><span class="item-number">02</span></div>
-          <details><summary>VIEW ITEM <span aria-hidden="true">↗</span></summary><p>Ivory top with an asymmetrical neckline. Illustrative sample product.</p></details>
-        </article>
-        <article class="product-card">
-          <img src="images/jeans.svg" alt="Illustration of washed blue wide leg jeans on a neutral background" width="700" height="900">
-          <div class="product-info"><div><h3>WIDE-LEG DENIM</h3><p class="price">1,290,000 VND</p></div><span class="item-number">03</span></div>
-          <details><summary>VIEW ITEM <span aria-hidden="true">↗</span></summary><p>Washed-blue, wide-leg denim with a relaxed fit. Illustrative sample product.</p></details>
-        </article>
-        <article class="product-card">
-          <img src="images/dress.svg" alt="Illustration of a black sleeveless midi dress on a neutral background" width="700" height="900">
-          <div class="product-info"><div><h3>SCULPTED MIDI DRESS</h3><p class="price">1,590,000 VND</p></div><span class="item-number">04</span></div>
-          <details><summary>VIEW ITEM <span aria-hidden="true">↗</span></summary><p>Black sleeveless midi dress with a shaped waist. Illustrative sample product.</p></details>
-        </article>
-      </div>
+        <h1>MAI THỊ THÙY DUYÊN</h1>
+
+        <p>Sinh viên - Trường Đại học Kinh tế TP. Hồ Chí Minh (UEH)</p>
+
+        <p>Website Design & CSS Practice</p>
+
+        
+        <div class="social">
+            <a href="https://github.com/mtd309"
+                target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+
+            <a href="https://www.facebook.com/thuyduyen.mai.718/?locale=vi_VN"
+                target="_blank" rel="noopener noreferrer">
+                Facebook
+            </a>
+
+            <a href="https://www.instagram.com/duawf_coco/"
+                target="_blank" rel="noopener noreferrer">
+                Instagram
+            </a>
+        </div>  
     </section>
-  </main>
 
-  <footer class="site-footer" id="about">
-    <p>ETS-INSPIRED INTERFACE STUDY</p>
-    <p>Educational HTML/CSS prototype · Not affiliated with ETS Official</p>
-  </footer>
+    <!-- DANH SÁCH BÀI TẬP -->
+    <h2 class="section-title">MY CSS ASSIGNMENTS</h2>
+
+    <section class="assignments">
+
+        <div class="card">
+            <h3>Bài tập 1</h3>
+            <p>Thực hành CSS qua các trò chơi CSS Diner và CSS Speedrun.</p>
+            <a href="https://github.com/mtd309/ecommerce-ui-improvement/tree/main/Tuan3/VeNha/Minh%20chung%20game" target="_blank">Xem minh chứng</a>
+        </div>
+
+        <div class="card">
+            <h3>Bài tập 2</h3>
+            <p>Thực hành các thuộc tính định dạng CSS.</p>
+            <a href="BaiTap2.html">Xem bài tập</a>
+        </div>
+
+        <div class="card">
+            <h3>Bài tập 4</h3>
+            <p>Thực hành bố cục và định dạng các thành phần.</p>
+            <a href="BaiTap4.html">Xem bài tập</a>
+        </div>
+
+        <div class="card">
+            <h3>Bài tập 5</h3>
+            <p>Thực hành thiết kế giao diện website.</p>
+            <a href="BaiTap5.html">Xem bài tập</a>
+        </div>
+
+        <div class="card">
+            <h3>Bài tập 6</h3>
+            <p>Thực hành xây dựng bố cục bằng CSS.</p>
+            <a href="BaiTap6.html">Xem bài tập</a>
+        </div>
+
+        <div class="card">
+            <h3>Bài tập 7</h3>
+            <p>Thực hành bố cục Header, Navigation, Main và Footer.</p>
+            <a href="BaiTap7.html">Xem bài tập</a>
+        </div>
+
+        <div class="card">
+            <h3>Bài tập 8</h3>
+            <p>Thực hành CSS với giao diện The Bat Family.</p>
+            <a href="css2/css2/css2.html">Xem bài tập</a>
+        </div>
+
+        <div class="card">
+            <h3>Bài tập 9</h3>
+            <p>Thực hành sử dụng thư viện Font Awesome 5.</p>
+            <a href="BaiTap9.html">Xem bài tập</a>
+        </div>
+
+    </section>
+
+</div>
+
+<footer>
+    © 2026 - Personal Website | CSS Practice
+</footer>
+
 </body>
 </html>
