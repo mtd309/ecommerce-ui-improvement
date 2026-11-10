@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 9 - Font Awesome 5</title>
+
+    <!-- Font Awesome 5.15.4 -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f5f7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #263b59;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+            color: #777;
+            margin-bottom: 35px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        h2 {
+            color: #2878b5;
+            font-size: 20px;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 12px;
+        }
+
+        .icon-list {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            font-size: 30px;
+        }
+
+        .list-example {
+            line-height: 2.2;
+            padding-left: 25px;
+        }
+
+        .list-example li {
+            margin-bottom: 5px;
+        }
+
+        .stack-example {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            flex-wrap: wrap;
+            font-size: 35px;
+        }
+
+        .fixed-example div {
+            margin: 12px 0;
+        }
+
+        .fixed-example i {
+            color: #2878b5;
+            font-size: 20px;
+        }
+
+        .quote {
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .quote i {
+            color: #2878b5;
+            margin-right: 12px;
+        }
+
+        .color-red {
+            color: red;
+        }
+
+        .color-blue {
+            color: blue;
+        }
+
+        .color-green {
+            color: green;
+        }
+
+        .color-pink {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>
+        <i class="fas fa-icons"></i>
+        FONT AWESOME 5
+    </h1>
+
+    <p class="description">
+        Thực hành sử dụng biểu tượng Font Awesome 5 miễn phí
+    </p>
+
+    <!-- 1. Color Icons -->
+    <div class="section">
+        <h2>1. Color Icons - Thay đổi màu sắc</h2>
+
+        <div class="icon-list">
+            <i class="fas fa-clock color-red"></i>
+            <i class="fas fa-clock color-blue"></i>
+            <i class="fas fa-clock color-green"></i>
+            <i class="fas fa-clock color-pink"></i>
+            <i class="fas fa-clock" style="color: #000;"></i>
+        </div>
+    </div>
+
+    <!-- 2. Sizing Icons -->
+    <div class="section">
+        <h2>2. Sizing Icons - Thay đổi kích thước</h2>
+
+        <div class="icon-list">
+            <i class="fas fa-clock fa-xs"></i>
+            <i class="fas fa-clock fa-sm"></i>
+            <i class="fas fa-clock fa-lg"></i>
+            <i class="fas fa-clock fa-2x"></i>
+            <i class="fas fa-clock fa-3x"></i>
+            <i class="fas fa-clock fa-5x"></i>
+        </div>
+    </div>
+
+    <!-- 3. Icon in a List -->
+    <div class="section">
+        <h2>3. Icon in a List - Chèn icon vào danh sách</h2>
+
+        <ul class="fa-ul list-example">
+            <li>
+                <span class="fa-li">
+                    <i class="fas fa-check-square"></i>
+                </span>
+                HTML
+            </li>
+
+            <li>
+                <span class="fa-li">
+                    <i class="fas fa-spinner fa-pulse"></i>
+                </span>
+                CSS
+            </li>
+
+            <li>
+                <span class="fa-li">
+                    <i class="fas fa-square"></i>
+                </span>
+                Font Awesome
+            </li>
+        </ul>
+    </div>
+
+    <!-- 4. Animating Icons -->
+    <div class="section">
+        <h2>4. Animating Icons - Hiệu ứng chuyển động</h2>
+
+        <div class="icon-list">
+            <i class="fas fa-spinner fa-spin"></i>
+            <i class="fas fa-circle-notch fa-spin"></i>
+            <i class="fas fa-sync-alt fa-spin"></i>
+            <i class="fas fa-cog fa-spin"></i>
+            <i class="fas fa-cog fa-pulse"></i>
+            <i class="fas fa-spinner fa-pulse"></i>
+        </div>
+    </div>
+
+    <!-- 5. Rotating and Flipping -->
+    <div class="section">
+        <h2>5. Rotating and Flipping - Xoay và lật icon</h2>
+
+        <div class="icon-list">
+            <i class="fas fa-horse"></i>
+            <i class="fas fa-horse fa-rotate-90"></i>
+            <i class="fas fa-horse fa-rotate-180"></i>
+            <i class="fas fa-horse fa-rotate-270"></i>
+            <i class="fas fa-horse fa-flip-horizontal"></i>
+            <i class="fas fa-horse fa-flip-vertical"></i>
+        </div>
+    </div>
+
+    <!-- 6. Stacking Icons -->
+    <div class="section">
+        <h2>6. Stacking Icons - Chồng nhiều icon</h2>
+
+        <div class="stack-example">
+            <span class="fa-stack">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+
+            <span class="fa-stack">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x"></i>
+            </span>
+
+            <span class="fa-stack">
+                <i class="fas fa-camera fa-stack-1x"></i>
+                <i class="fas fa-ban fa-stack-2x color-red"></i>
+            </span>
+        </div>
+    </div>
+
+    <!-- 7. Fixed-Width Icons -->
+    <div class="section">
+        <h2>7. Fixed-Width Icons - Cố định chiều rộng</h2>
+
+        <div class="fixed-example">
+            <p><strong>Fixed Width:</strong></p>
+
+            <div>
+                <i class="fas fa-arrows-alt-v fa-fw"></i>
+                Icon 1
+            </div>
+
+            <div>
+                <i class="fas fa-band-aid fa-fw"></i>
+                Icon 2
+            </div>
+
+            <div>
+                <i class="fab fa-bluetooth-b fa-fw"></i>
+                Icon 3
+            </div>
+
+            <p><strong>Without Fixed Width:</strong></p>
+
+            <div>
+                <i class="fas fa-arrows-alt-v"></i>
+                Icon 1
+            </div>
+
+            <div>
+                <i class="fas fa-band-aid"></i>
+                Icon 2
+            </div>
+
+            <div>
+                <i class="fab fa-bluetooth-b"></i>
+                Icon 3
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. Bordered and Pulled Icons -->
+    <div class="section">
+        <h2>8. Bordered + Pulled Icons</h2>
+
+        <p class="quote">
+            <i class="fas fa-quote-left fa-3x fa-pull-left fa-border"></i>
+            Font Awesome cung cấp nhiều biểu tượng giúp tăng tính trực quan
+            cho giao diện website. Các biểu tượng có thể được tùy chỉnh màu
+            sắc, kích thước, vị trí và hiệu ứng hiển thị.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
