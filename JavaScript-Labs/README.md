@@ -1,8 +1,8 @@
 # JavaScript Labs — Bài tập cá nhân
 
-- Sinh viên: **[ĐIỀN HỌ TÊN]**
-- MSSV: **[ĐIỀN MSSV]**
-- Lớp học phần: **[ĐIỀN LHP]**
+- Sinh viên: MAI THỊ THÙY DUYÊN
+- MSSV: 31241021982
+- Lớp học phần: 26C1INF50902701
 - Repository: https://github.com/mtd309/ecommerce-ui-improvement
 - GitHub Pages (khi được kích hoạt): https://mtd309.github.io/ecommerce-ui-improvement/JavaScript-Labs/
 
