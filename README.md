@@ -1,11 +1,20 @@
-# Danh mục ảnh minh chứng
+# JavaScript Labs — Bài tập cá nhân
 
-| Tệp | Nội dung | Cách sử dụng |
-|---|---|---|
-| `before-product-grid-desktop.png` | Khu vực sản phẩm trước khi card được hoàn thiện | Ảnh Before cho phần trình bày tiến trình giao diện |
-| `after-product-cards-desktop.png` | Card có viền, khoảng đệm và View Item | Ảnh After desktop |
-| `hover-view-item.png` | Nút View Item ở trạng thái hover | Minh chứng hover; không đại diện cho focus |
-| `mobile-product-grid.png` | Danh sách sản phẩm trên mobile | Minh chứng bố cục hai cột |
-| `mobile-full-page.png` | Toàn bộ phần tìm kiếm và gợi ý trên mobile | Minh chứng giao diện mobile |
+- Sinh viên: **[ĐIỀN HỌ TÊN]**
+- MSSV: **[ĐIỀN MSSV]**
+- Lớp học phần: **[ĐIỀN LHP]**
+- Repository: https://github.com/mtd309/ecommerce-ui-improvement
+- GitHub Pages (khi được kích hoạt): https://mtd309.github.io/ecommerce-ui-improvement/JavaScript-Labs/
 
-Ảnh DevTools ở tab Welcome không đưa vào nhóm minh chứng chính vì không thể hiện rõ việc kiểm tra Elements hoặc Console.
+## Cấu trúc
+- `index.html`: Trang portfolio
+- `css/style.css`: Giao diện
+- `Lab08/`: JavaScript Language Foundations
+- `Lab09/`: DOM and Events
+- `Lab10/`: jQuery
+
+## Cách chạy
+Mở `index.html` từ GitHub Pages, chọn một Lab và truy cập từng tệp bài tập. Các file trong các Lab được lấy từ **starter kit của giảng viên**, không phải bản đã xác nhận hoàn thành. Cần thực hiện đúng PDF Lab 08–10 và ghi lại minh chứng kiểm thử thực tế.
+
+## Lưu ý
+Các trang `index.html` trong Lab được tạo để điều hướng tệp hiện có; cần bổ sung các exercise còn thiếu, hoàn thiện JavaScript, kiểm tra đường dẫn, và cập nhật thông tin cá nhân.
