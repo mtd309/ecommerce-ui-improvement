@@ -1,1 +1,11 @@
-/* code goes here */
+var msg = document.getElementById('msgArea');
+document.getElementById('pageTitle').innerHTML='Even newer title';
+msg.value='My class is '+msg.getAttribute('class')+'\n';
+var spans=document.getElementsByTagName('span');
+for (var i=0;i<spans.length;i++) msg.value += spans[i].innerText+'\n';
+var counts=document.getElementsByClassName('count-number');
+for (var j=0;j<counts.length;j++) msg.value+=counts[j].innerText+'\n';
+var paragraphs=document.querySelectorAll('#first p');
+for (var k=0;k<paragraphs.length;k++) msg.value+=paragraphs[k].innerText+'\n';
+var features=document.getElementById('features');
+if (features) features.style.backgroundColor='green';

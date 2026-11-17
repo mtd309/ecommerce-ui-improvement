@@ -17,4 +17,13 @@ var countries = [
 countries.push(new Country("Spain", "ES", "Madrid", 46505963));
 countries.push(new Country("United Kingdom", "GB", "London", 62348447));
 
-/* your code goes here */
+
+
+for (var i=0;i<countries.length;i++) {
+ var country=countries[i];
+ document.write("<div class='box'><img class='boxImg' src='flags/"+country.iso+".png'>");
+ for (var property in country) {
+  if (Object.prototype.hasOwnProperty.call(country,property)) document.write('<strong>'+property+': </strong>'+country[property]+'<br>');
+ }
+ document.write('</div>');
+}

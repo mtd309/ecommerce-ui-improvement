@@ -9,4 +9,7 @@ function outputBox(num) {
    return box;
 }
 
-/* your code goes here */
+window.addEventListener('load',function(){
+ var div=document.getElementById('div1');
+ if(div) alert(div.innerHTML);
+});
