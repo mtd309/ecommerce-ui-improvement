@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập Responsive - Slide 22</title>
+
+    <style>
+        /* Layout gốc - Slide 19 */
+        .left, .right {
+            height: 400px;
+        }
+
+        .left {
+            background: blue;
+            float: left;
+            width: 70%;
+        }
+
+        .right {
+            background: red;
+            float: right;
+            width: 30%;
+        }
+
+        /* Responsive - Slide 21 */
+        @media only screen and (max-width: 768px) {
+            .left, .right {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        /* Yêu cầu 1 - Slide 22 */
+        @media only screen and (min-width: 320px)
+                           and (max-width: 480px) {
+            .right {
+                display: none;
+            }
+        }
+
+        /* Yêu cầu 2 - Slide 22 */
+        @media print {
+            .left {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">LEFT</div>
+        <div class="right">RIGHT</div>
+    </div>
+</body>
+</html>
+
+<picture>
+    <!-- Màn hình lớn -->
+    <source
+        media="(min-width: 600px)"
+        srcset="https://ueh.edu.vn/images/logo-header.png">
+
+    <!-- Màn hình từ 400px trở lên -->
+    <source
+        media="(min-width: 400px)"
+        srcset="https://ctd.ueh.edu.vn/wp-content/uploads/logo.png">
+
+    <!-- Màn hình nhỏ hơn 400px -->
+    <img
+        src="https://ueh.edu.vn/schools/college/images/logo/bit-header-logo.png"
+        alt="Logo UEH"
+        style="max-width: 100%; height: auto;">
+</picture>
