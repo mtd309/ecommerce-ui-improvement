@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nhật ký học tập Front-end nâng cao ngày 18/11/2026: Responsive, Media Queries, Picture và Chrome DevTools.">
+  <title>FE Nâng cao | Nhật ký buổi học 18.11</title>
+  <style>
+    :root{--bg:#0b1115;--surface:#141d21;--surface2:#1b272a;--line:#30403e;--ink:#f2f5ec;--muted:#a9b8ae;--accent:#c9f67d;--mint:#6adfbc}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.65}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 85% 10%,#a9ff7722,transparent 33%)}
+    a{color:inherit;text-decoration:none}.wrap{max-width:1130px;margin:auto;padding:0 26px}.top{height:80px;border-bottom:1px solid #ffffff15;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{font-size:15px;font-weight:850;letter-spacing:.08em}.brand span{color:var(--accent)}nav{display:flex;gap:24px;font-size:14px;color:var(--muted)}nav a:hover{color:var(--accent)}
+    .hero{padding:104px 0 88px;display:grid;grid-template-columns:1.45fr .55fr;gap:46px;align-items:center}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.2em;font-size:12px;font-weight:800}.hero h1{font-size:clamp(44px,6.5vw,86px);line-height:1.06;letter-spacing:-.06em;margin:19px 0 25px}.hero h1 em{font-style:normal;color:var(--accent)}.lead{color:var(--muted);font-size:18px;max-width:640px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:31px}.btn{background:var(--accent);color:#112013;padding:14px 21px;border-radius:9px;font-size:14px;font-weight:800;display:inline-flex;align-items:center;gap:8px}.btn.secondary{border:1px solid #5b7365;background:transparent;color:var(--ink)}.btn:hover{transform:translateY(-2px);transition:.2s}.hero-art{aspect-ratio:1;display:grid;place-items:center;background:linear-gradient(135deg,#273e37,#141c1d);border:1px solid #526852;border-radius:30px;position:relative;overflow:hidden}.hero-art:after{content:"</>";font-size:clamp(85px,15vw,160px);font-weight:900;letter-spacing:-.11em;color:var(--accent);text-shadow:0 13px 40px #0005}.orb{position:absolute;width:270px;height:270px;border:1px solid #c9f67d66;border-radius:50%}.orb.two{width:380px;height:380px;border-color:#c9f67d20}
+    .meta{display:flex;gap:25px;flex-wrap:wrap;color:var(--muted);font-size:13px;border-top:1px solid #ffffff20;padding-top:22px;margin-top:44px}.meta b{color:var(--ink)}
+    section{padding:64px 0}.section-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:28px}.kicker{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.16em;text-transform:uppercase}.section-head h2{font-size:clamp(28px,4vw,43px);letter-spacing:-.04em;margin:9px 0 0}.note{font-size:14px;color:var(--muted);max-width:340px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card{background:var(--surface);border:1px solid var(--line);border-radius:17px;padding:28px;min-height:255px;transition:transform .2s}.card:hover{transform:translateY(-4px)}.num{display:inline-block;color:var(--accent);font-weight:900;font-size:13px;margin-bottom:28px}.card h3{font-size:21px;margin:0 0 12px;letter-spacing:-.02em}.card p{font-size:14px;color:var(--muted);margin:0}.wide{grid-column:span 2}.highlight{background:linear-gradient(120deg,#243d30,#1b2925)}
+    .practice{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:31px}.tag{display:inline-block;border:1px solid #789973;color:var(--accent);border-radius:100px;padding:5px 11px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800}.panel h3{font-size:27px;letter-spacing:-.04em;line-height:1.2;margin:23px 0 14px}.panel p{color:var(--muted);font-size:14px}.panel .btn{margin-top:12px}.code{background:#0c1315;border:1px solid #2f4440;border-radius:10px;padding:15px;font:13px/1.7 Consolas,Monaco,monospace;color:#c9f67d;white-space:pre-wrap;overflow-wrap:anywhere;margin:18px 0}.small{font-size:12px!important;color:#9baaa2!important}.callout{border-left:3px solid var(--accent);padding-left:15px;margin-top:20px;color:var(--muted);font-size:13px}
+    .end{padding:70px 0 85px;text-align:center;border-top:1px solid #ffffff15}.end h2{font-size:38px;letter-spacing:-.05em;margin:10px 0}.end p{color:var(--muted);font-size:14px}footer{border-top:1px solid #ffffff14;padding:25px 0;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:760px){.top{height:65px}nav{gap:12px;font-size:12px}.hero{grid-template-columns:1fr;padding:70px 0 55px}.hero-art{height:220px;aspect-ratio:auto}.hero-art:after{font-size:115px}.grid,.practice{grid-template-columns:1fr}.wide{grid-column:span 1}.section-head{display:block}.hero h1{font-size:52px}.meta{gap:10px 22px}section{padding:43px 0}}
+    @media print{body{background:#fff;color:#111}.hero-art,.btn{display:none}.card,.panel{background:#fff;color:#111;border-color:#777}.card p,.panel p,.lead{color:#333}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top"><a class="brand" href="#top">FE<span>.</span>NANGCAO</a><nav><a href="#noidung">Nội dung</a><a href="#baitap">Bài thực hành</a><a href="#minhchung">Minh chứng</a></nav></header>
+    <main id="top">
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Learning journal / 18 November 2026</div>
+          <h1>Thiết kế web<br><em>thích ứng.</em><br>Hiểu JavaScript.</h1>
+          <p class="lead">Ghi chép buổi học Front-end nâng cao: thiết kế responsive bằng CSS, hiển thị ảnh theo kích thước màn hình và khám phá JavaScript qua Chrome DevTools.</p>
+          <div class="actions"><a class="btn" href="Bai1.html">Xem bài 1 ↗</a><a class="btn secondary" href="#noidung">Khám phá nội dung ↓</a></div>
+          <div class="meta"><span><b>Ngày học</b> · 18.11.2026</span><span><b>Môn</b> · Front-end nâng cao</span><span><b>Hình thức</b> · Thực hành</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="orb"></div><div class="orb two"></div></div>
+      </div>
+      <section id="noidung">
+        <div class="section-head"><div><div class="kicker">01 / Kiến thức</div><h2>Hôm nay học gì?</h2></div><p class="note">Nội dung được tổng hợp từ bài HTML và ảnh minh chứng trong tài liệu của buổi học.</p></div>
+        <div class="grid">
+          <article class="card"><span class="num">01 — LAYOUT</span><h3>Responsive Design</h3><p>Thiết lập hai vùng LEFT / RIGHT: ban đầu chia chiều rộng 70% và 30%, chuyển về 100% khi màn hình thu nhỏ.</p></article>
+          <article class="card"><span class="num">02 — CSS</span><h3>Media Queries</h3><p>Dùng mốc 768px để đổi bố cục; khoảng 320–480px ẩn vùng RIGHT; khi in ẩn vùng LEFT bằng <code>@media print</code>.</p></article>
+          <article class="card"><span class="num">03 — HTML</span><h3>Responsive Images</h3><p>Tìm hiểu thẻ <code>&lt;picture&gt;</code>, <code>&lt;source&gt;</code> và <code>srcset</code> để chọn logo theo kích thước màn hình.</p></article>
+          <article class="card wide highlight"><span class="num">04 — JAVASCRIPT</span><h3>Chrome DevTools &amp; Console</h3><p>Thực hành mở công cụ dành cho nhà phát triển, nhập lệnh JavaScript trong Console và quan sát kết quả trả về. Qua trò Dino, bài học minh họa việc gán lại hàm bằng Arrow Function và thử thay đổi hành vi của game.</p></article>
+          <article class="card"><span class="num">05 — SYNTAX</span><h3>Arrow Function</h3><p>Phân biệt hàm rỗng <code>() =&gt; {}</code> và hàm nhận tham số <code>(value) =&gt; {...}</code> khi viết mã JavaScript.</p></article>
+        </div>
+      </section>
+      <section id="baitap">
+        <div class="section-head"><div><div class="kicker">02 / Thực hành</div><h2>Bài làm của mình</h2></div><p class="note">Liên kết trực tiếp tới file bài tập và tài liệu minh chứng nằm cùng thư mục.</p></div>
+        <div class="practice">
+          <article class="panel"><span class="tag">Bài 01 · HTML &amp; CSS</span><h3>Bố cục responsive</h3><p>Trang <b>Bai1.html</b> có hai khối màu xanh / đỏ và các điều kiện Media Query theo yêu cầu trên lớp.</p><div class="code">@media (max-width: 768px) {<br>  .left, .right { width: 100%; }<br>}</div><a class="btn" href="Bai1.html">Mở Bai1.html ↗</a></article>
+          <article class="panel" id="minhchung"><span class="tag">Bài tập về nhà · DevTools</span><h3>Khám phá trò Dino</h3><p>Ảnh thực hành trong tài liệu Word ghi lại lệnh ghi đè <code>gameOver</code>, thử thay đổi tốc độ và lực nhảy bằng JavaScript.</p><div class="code">this.gameOver = () =&gt; {};</div><p class="small">Ví dụ trong tài liệu; hiệu quả thực tế phụ thuộc ngữ cảnh <code>this</code> và mã nguồn của game.</p><div class="actions"><a class="btn" href="MaiThiThuyDuyen.docx">Xem file minh chứng ↗</a><a class="btn secondary" href="https://chromedino.com/" target="_blank" rel="noopener noreferrer">Mở Dino ↗</a></div></article>
+        </div>
+        <div class="callout">Ghi chú: Thẻ <code>&lt;picture&gt;</code> trong file Bai1.html hiện được đặt sau thẻ <code>&lt;/html&gt;</code>. Nên chuyển vào bên trong <code>&lt;body&gt;</code> nếu tiếp tục hoàn thiện bài responsive image.</div>
+      </section>
+      <div class="end"><div class="kicker">Keep learning / Keep building</div><h2>Mỗi buổi học, một bước tiến.</h2><p>Trang tổng hợp kết quả học tập Front-end nâng cao · 18/11/2026</p><div class="actions" style="justify-content:center"><a class="btn" href="Bai1.html">Xem bài thực hành ↗</a></div></div>
+    </main>
+    <footer><span>© 2026 · Mai Thị Thùy Duyên</span><span>Front-end nâng cao · Practice journal</span></footer>
+  </div>
+</body>
+</html>
